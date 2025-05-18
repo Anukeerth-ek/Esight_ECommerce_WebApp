@@ -1,5 +1,5 @@
 const FilterSidebar = () => (
-  <aside className="w-64 p-4 border rounded">
+  <aside className="w-64 p-4 border rounded h-min sticky top-4">
     <h3 className="font-semibold mb-4">Brand</h3>
     <ul className="space-y-2">
       {["Nike", "Adidas", "Apple", "New Balance", "Puma", "Uniqlo"].map(brand => (
