@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import {IconTrash} from '@tabler/icons-react'
+import { useSelector } from 'react-redux';
+import { RootState } from '../store/store';
 
 type CartItem = {
   id: number;
@@ -46,7 +48,8 @@ export default function CartPage() {
     2: 1,
     3: 1,
   });
-
+const cartItems = useSelector((state: RootState) => state.cart.cartItems);
+console.log("cart", cartItems)
 
   return (
     <div className="p-6 md:p-10 bg-[#faf6f2] min-h-screen">

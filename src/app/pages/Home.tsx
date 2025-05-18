@@ -5,7 +5,7 @@ import ProductCard from "../components/ProductCard";
 import { Product } from "../types/index";
 import ProductList from "../components/ProductList";
 
-export default function ClothesPage() {
+export default function HomePage() {
   return (
     <div>
       <HeroBanner />

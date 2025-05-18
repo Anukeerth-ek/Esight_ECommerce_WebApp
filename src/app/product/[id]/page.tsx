@@ -11,9 +11,9 @@ interface DetailPageProps {
 // -params
 
 const productDetailPage = async ({ params }: DetailPageProps) => {
-  console.log('rodu', params)
+
      const data = await fetchProductDetails(params?.id);
-     console.log("data", data);
+
      return <ProductDetail product={data}/>;
 };
 

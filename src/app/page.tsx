@@ -1,10 +1,9 @@
-import Image from "next/image";
-import ClothesPage from "./pages/clothes";
+import HomePage from "./pages/Home";
 
 export default function Home() {
   return (
     <>
-    <ClothesPage/>
+    <HomePage/>
     </>
   );
 }

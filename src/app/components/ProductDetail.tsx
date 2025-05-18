@@ -1,13 +1,18 @@
-// app/components/ProductDetail.tsx
 "use client";
-import { useState } from "react";
-import { Product } from "../types";
 
-const colors = ["Blue", "Green", "Black", "Sky Blue", "White"];
+import { Product } from "../types";
+import { addToCart } from "../store/cartSlice";
+import { useDispatch } from "react-redux";
+import { useRouter } from "next/navigation";
 
 export default function ProductDetail({ product }: { product: Product }) {
-     const [selectedColor, setSelectedColor] = useState(colors[0]);
-     const [quantity, setQuantity] = useState(1);
+     const dispatch = useDispatch();
+     const router = useRouter();
+
+     const handleAddToCart = () => {
+          dispatch(addToCart(product));
+          router.push("/cart");
+     };
 
      return (
           <div className="flex flex-col lg:flex-row gap-12 py-15 px-9">
@@ -50,7 +55,10 @@ export default function ProductDetail({ product }: { product: Product }) {
                          </button>
                     </div> */}
 
-                    <button className="mt-6 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded w-full font-semibold">
+                    <button
+                         onClick={handleAddToCart}
+                         className="mt-6 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded w-full font-semibold cursor-pointer"
+                    >
                          🛒 Add to Cart
                     </button>
                </div>
