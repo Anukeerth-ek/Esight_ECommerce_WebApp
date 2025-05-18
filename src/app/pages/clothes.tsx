@@ -8,7 +8,6 @@ import ProductList from "../components/ProductList";
 export default function ClothesPage() {
   return (
     <div>
-      <Header />
       <HeroBanner />
       <div className="max-w-7xl mx-auto px-6 py-8">
         <p className="text-gray-500 mb-4">Home &gt; Clothes</p>
