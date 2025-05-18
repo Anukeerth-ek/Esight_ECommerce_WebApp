@@ -3,28 +3,7 @@ import HeroBanner from "../components/HeroBanner";
 import FilterSidebar from "../components/FilterSideBar";
 import ProductCard from "../components/ProductCard";
 import { Product } from "../types/index";
-
-const dummyProducts: Product[] = [
-  {
-    id: 1,
-    name: "Shirt Soft Cotton",
-    price: 40,
-    imageUrl: "/images/shirt1.jpg",
-    brand: "Uniqlo",
-    isNew: true,
-    stockLeft: 12,
-  },
-  {
-    id: 2,
-    name: "Zip Up Neck Shirt",
-    price: 40,
-    imageUrl: "/images/shirt2.jpg",
-    brand: "Uniqlo",
-    isNew: true,
-    stockLeft: 12,
-  },
-  // add more...
-];
+import ProductList from "../components/ProductList";
 
 export default function ClothesPage() {
   return (
@@ -43,9 +22,10 @@ export default function ClothesPage() {
               </select>
             </div>
             <div className="grid grid-cols-3 gap-6">
-              {dummyProducts.map(product => (
+              {/* {dummyProducts.map(product => (
                 <ProductCard key={product.id} product={product} />
-              ))}
+              ))} */}
+              <ProductList/>
             </div>
           </div>
         </div>
