@@ -13,7 +13,7 @@ const ProductCard = ({ product }: ProductProps) => {
 
      return (
           <Link href={`/product/${product?.id}`}>
-               <div className="border rounded p-3 text-center">
+               <div className="border rounded p-3 text-center w-full ">
                     <img src={product.image} alt={product?.title} className="w-full h-64 object-cover rounded-md" />
                     <h4 className="text-lg font-medium my-2.5">
                          {product.title.length > 18 ? product.title.slice(0, 25) : product.title}
