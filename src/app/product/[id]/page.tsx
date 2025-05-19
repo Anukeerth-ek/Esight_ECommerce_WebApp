@@ -1,5 +1,5 @@
 import ProductDetail from "@/app/components/ProductDetail";
-import { fetchProductDetails } from "@/app/fetchProductDetail";
+import { fetchProductDetails } from "@/app/components/fetchProductDetail";
 import React from "react";
 
 interface DetailPageProps {
