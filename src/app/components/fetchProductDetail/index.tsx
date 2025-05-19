@@ -1,6 +1,12 @@
- export const fetchProductDetails= async(productId:number)=> {
+import { Product } from "@/app/types";
 
-     const response = await fetch(`https://fakestoreapi.com/products/${productId}`).then(data=> data.json());
+export const fetchProductDetails =  async (productId: number): Promise<Product> =>  {
+  const response = await fetch(`https://fakestoreapi.com/products/${productId}`);
 
-     return response;
+  if (!response.ok) {
+    throw new Error("Failed to fetch product");
+  }
+
+  const data = await response.json();
+  return data;
 };
