@@ -3,12 +3,6 @@ import { fetchProductDetails } from "@/app/components/fetchProductDetail";
 import { ProductDetailPageParams } from "@/app/types";
 import React from "react";
 
-type ProductDetailPageProps = {
-  params: {
-    id: string;
-  };
-};
-
 export default async function ProductDetailPage({
   params,
 }: {
