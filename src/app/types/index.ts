@@ -25,3 +25,7 @@ declare module 'react-shimmer-effects' {
   }
 
 }
+
+export type ProductDetailPageParams = {
+  id: string;
+};
