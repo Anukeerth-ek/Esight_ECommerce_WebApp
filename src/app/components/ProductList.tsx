@@ -19,7 +19,7 @@ const ProductList = () => {
      return (
           <>
                {clothData?.map((item, index) => (
-                    <ProductCard key={index} product={item} />
+                         <ProductCard key={index} product={item} />
                ))}
           </>
      );
