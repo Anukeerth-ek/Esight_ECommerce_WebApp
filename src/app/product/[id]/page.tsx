@@ -4,7 +4,7 @@ import React from "react";
 
 interface DetailPageProps {
   params: {
-    id: string;
+    id: number;
   };
 }
 // we need to name the prop as params, if not we will get undefined. This is because next router dynamic file always get props named as
