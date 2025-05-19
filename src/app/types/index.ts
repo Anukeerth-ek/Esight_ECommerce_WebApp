@@ -25,8 +25,3 @@ declare module 'react-shimmer-effects' {
   }
 
 }
-export interface ProductDetailParams {
-  params: {
-    id: string;
-  };
-}
