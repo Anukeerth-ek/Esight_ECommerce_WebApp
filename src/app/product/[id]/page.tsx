@@ -3,18 +3,16 @@ import { fetchProductDetails } from "@/app/components/fetchProductDetail";
 import React from "react";
 
 interface DetailPageProps {
-     params: {
-          id: string;
-     };
+  params: {
+    id: string;
+  };
 }
-// we need to name the prop as params, if not we will get undefined. This is because next router dynamic file always get props named as
-// -params
 
-const productDetailPage = async ({ params }: DetailPageProps) => {
-     const id = Number(params.id);
-     const data = await fetchProductDetails(id);
+const ProductDetailPage = async ({ params }: DetailPageProps) => {
+  const id = Number(params.id);
+  const data = await fetchProductDetails(id);
 
-     return <ProductDetail product={data} />;
+  return <ProductDetail product={data} />;
 };
 
-export default productDetailPage;
+export default ProductDetailPage;
