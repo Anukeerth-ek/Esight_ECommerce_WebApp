@@ -12,7 +12,7 @@ const Header = () => {
      const [showMenu, setShowMenu] = useState(false);
 
      return (
-          <header className="relative px-4 py-4 border-b flex items-center justify-between">
+          <header className="relative px-20 py-4 border-b flex items-center justify-between">
                <div className="flex items-center gap-4">
                     <Link href="/">
                          <h1 className="text-2xl font-bold text-blue-500">Stella</h1>
@@ -30,6 +30,9 @@ const Header = () => {
 
                <div className="flex items-center gap-4">
                     <div className="hidden lg:flex items-center gap-6">
+                         <Link href="/">
+                              <span>Home</span>
+                         </Link>
                          <Link href="/cart">
                               <p className="relative">
                                    Cart 🛒{" "}
@@ -40,10 +43,10 @@ const Header = () => {
                                    )}
                               </p>
                          </Link>
-                         <span>English 🌐</span>
-                         <span>
-                              Welcome Back! <strong>Abdel Rahman</strong>
-                         </span>
+
+                         <Link href="/about">
+                              <span>About</span>
+                         </Link>
                     </div>
 
                     <div className="flex lg:hidden items-center gap-4">
@@ -58,9 +61,12 @@ const Header = () => {
 
                {showMenu && (
                     <div className="absolute top-full right-4 mt-2 bg-white text-black border rounded shadow-md w-60 p-4 z-10 lg:hidden">
+                         <Link href="/">
+                              <p className="mb-2"> Home</p>
+                         </Link>
                          <Link href="/cart">
                               <p className="relative mb-2">
-                                   Cart 🛒{" "}
+                                   Cart 🛒
                                    {cartItems.length > 0 && (
                                         <span className="bg-green-700 text-white px-2 text-sm rounded-3xl absolute -top-2 -right-4">
                                              {cartItems.length}
@@ -68,14 +74,14 @@ const Header = () => {
                                    )}
                               </p>
                          </Link>
-                         <p className="mb-2">English 🌐</p>
-                         <p>
-                              Welcome Back! <strong>Abdel Rahman</strong>
-                         </p>
+
+                         <Link href="/about">
+                              <p>About</p>
+                         </Link>
                     </div>
                )}
           </header>
-     ); 
+     );
 };
 
 export default Header;
