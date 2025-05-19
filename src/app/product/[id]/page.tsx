@@ -4,7 +4,7 @@ import React from "react";
 
 interface DetailPageProps {
   params: {
-    id: number;
+    id: string;
   };
 }
 // we need to name the prop as params, if not we will get undefined. This is because next router dynamic file always get props named as
@@ -12,7 +12,7 @@ interface DetailPageProps {
 
 const productDetailPage = async ({ params }: DetailPageProps) => {
 
-     const data = await fetchProductDetails(params?.id);
+     const data = await fetchProductDetails(Number(params.id) );
 
      return <ProductDetail product={data}/>;
 };
