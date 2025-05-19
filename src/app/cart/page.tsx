@@ -5,7 +5,6 @@ import { decrementQuantity, incrementQuantity, removeFromCart } from "../store/c
 import { RootState } from "../store/store";
 import { IconTrash } from "@tabler/icons-react";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function CartPage() {
      const dispatch = useDispatch();

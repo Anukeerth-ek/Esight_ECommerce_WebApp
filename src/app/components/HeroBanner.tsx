@@ -1,6 +1,3 @@
-import Image from 'next/image'
-import bannerImage from '../../../public/shopping-online-on-phone-podium-260nw-1886650081.webp'
-
 const HeroBanner = () => (
      <section className="relative w-full h-[350px] bg-gray-100">
           {/* <Image

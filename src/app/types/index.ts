@@ -12,8 +12,6 @@ export type Product = {
   }
 };
 
-// types/react-shimmer-effects.d.ts
-import * as React from 'react';
 
 declare module 'react-shimmer-effects' {
   export interface ShimmerSimpleGalleryProps {

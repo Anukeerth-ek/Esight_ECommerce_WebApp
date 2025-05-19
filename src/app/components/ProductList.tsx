@@ -20,8 +20,8 @@ const ProductList = () => {
                }
                const data = await res.json();
                setProductData(data);
-          } catch (err: any) {
-               setError(err.message || "Something went wrong");
+          } catch (err) {
+               setError( "Something went wrong");
           } finally {
                setIsLoading(false);
           }
