@@ -5,6 +5,7 @@ import { decrementQuantity, incrementQuantity, removeFromCart } from "../store/c
 import { RootState } from "../store/store";
 import { IconTrash } from "@tabler/icons-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function CartPage() {
      const dispatch = useDispatch();
@@ -35,7 +36,7 @@ export default function CartPage() {
                               <div className="text-center text-gray-600 mt-10">
                                    <h2 className="text-2xl font-semibold mb-2">Your cart is empty 🛒</h2>
                                    <div className="flex items-center justify-center">
-                                        <img
+                                        <Image
                                              className="h-1/2"
                                              alt="Empty Cart"
                                              src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-illustration-download-in-svg-png-gif-file-formats--state-no-items-zero-page-added-states-pack-design-development-illustrations-4610092.png?f=webp"
@@ -52,7 +53,7 @@ export default function CartPage() {
                                         className="bg-white rounded-lg p-4 flex items-center justify-between shadow"
                                    >
                                         <div className="flex items-center gap-4">
-                                             <img
+                                             <Image
                                                   src={item.image}
                                                   alt={item.title}
                                                   className="w-20 h-20 object-cover rounded-md"

@@ -8,7 +8,7 @@ import { ShimmerSimpleGallery } from "react-shimmer-effects";
 const ProductList = () => {
      const [productData, setProductData] = useState<Product[]>([]);
      const [isLoading, setIsLoading] = useState(true);
-     const [error, setError] = useState<string | null>(null); // optional error state
+     const [error, setError] = useState<string | null>(null);
 
      const handleFetchApi = async () => {
           setIsLoading(true);
@@ -22,6 +22,7 @@ const ProductList = () => {
                setProductData(data);
           } catch (err) {
                setError( "Something went wrong");
+               console.log(err)
           } finally {
                setIsLoading(false);
           }
@@ -31,6 +32,7 @@ const ProductList = () => {
           handleFetchApi();
      }, []);
 
+     if(error) {return <p>Please try reloading...</p>}
      return isLoading ? (
      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 py-6">
     {Array(9).fill(null).map((_, index) => (

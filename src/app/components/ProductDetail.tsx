@@ -4,6 +4,7 @@ import { Product } from "../types";
 import { addToCart } from "../store/cartSlice";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function ProductDetail({ product }: { product: Product }) {
      const dispatch = useDispatch();
@@ -19,7 +20,7 @@ export default function ProductDetail({ product }: { product: Product }) {
                {/* Image Section */}
                <div className="flex-1">
                     <div className="bg-gray-100 p-4 rounded-lg">
-                         <img src={product.image} alt={product.title} className="object-contain w-full h-[400px]" />
+                         <Image src={product.image} alt={product.title} className="object-contain w-full h-[400px]" />
                     </div>
                </div>
 
