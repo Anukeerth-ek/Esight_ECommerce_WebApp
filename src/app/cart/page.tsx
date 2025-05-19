@@ -39,6 +39,8 @@ export default function CartPage() {
                                         <Image
                                              className="h-1/2"
                                              alt="Empty Cart"
+                                             width={100}
+                                             height={100}
                                              src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-illustration-download-in-svg-png-gif-file-formats--state-no-items-zero-page-added-states-pack-design-development-illustrations-4610092.png?f=webp"
                                         />
                                    </div>
@@ -53,7 +55,7 @@ export default function CartPage() {
                                         className="bg-white rounded-lg p-4 flex items-center justify-between shadow"
                                    >
                                         <div className="flex items-center gap-4">
-                                             <Image
+                                             <img
                                                   src={item.image}
                                                   alt={item.title}
                                                   className="w-20 h-20 object-cover rounded-md"

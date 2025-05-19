@@ -20,7 +20,7 @@ export default function ProductDetail({ product }: { product: Product }) {
                {/* Image Section */}
                <div className="flex-1">
                     <div className="bg-gray-100 p-4 rounded-lg">
-                         <Image src={product.image} alt={product.title} className="object-contain w-full h-[400px]" />
+                         <img src={product.image} alt={product.title} className="object-contain w-full h-[400px]" />
                     </div>
                </div>
 
