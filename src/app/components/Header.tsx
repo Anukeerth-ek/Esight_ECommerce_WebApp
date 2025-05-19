@@ -3,37 +3,79 @@
 import Link from "next/link";
 import { useSelector } from "react-redux";
 import { RootState } from "../store/store";
+import { useState } from "react";
+import { IconMenuDeep, IconSearch } from "@tabler/icons-react";
 
 const Header = () => {
      const cartItems = useSelector((state: RootState) => state.cart.cartItems);
-     console.log("cart", cartItems);
+     const [showSearch, setShowSearch] = useState(false);
+     const [showMenu, setShowMenu] = useState(false);
+
      return (
-          <header className="flex items-center justify-between px-6 py-4 border-b">
+          <header className="relative px-4 py-4 border-b flex items-center justify-between">
                <div className="flex items-center gap-4">
                     <Link href="/">
                          <h1 className="text-2xl font-bold text-blue-500">Stella</h1>
                     </Link>
-                    <input className="border px-4 py-2 rounded w-80" placeholder="What are you looking for?" />
+
+                    <input
+                         className="border px-4 py-1 rounded w-60 md:w-80 hidden lg:block"
+                         placeholder="What are you looking for?"
+                    />
+
+                    {showSearch && (
+                         <input className="border px-4 py-0.5 rounded w-48 block lg:hidden" placeholder="Search..." />
+                    )}
                </div>
-               <div className="flex items-center gap-6">
-                    {/* Add icons if using e.g. Lucide */}
-                    <Link href="/cart">
-                         <p className="relative">
-                              Cart🛒{" "}
-                              {cartItems.length > 0 && (
-                                   <span className="bg-green-700  px-1 rounded-3xl absolute bottom-3 h-min">
-                                        {cartItems.length}
-                                   </span>
-                              )}{" "}
+
+               <div className="flex items-center gap-4">
+                    <div className="hidden lg:flex items-center gap-6">
+                         <Link href="/cart">
+                              <p className="relative">
+                                   Cart 🛒{" "}
+                                   {cartItems.length > 0 && (
+                                        <span className="bg-green-700 text-white px-2 text-sm rounded-3xl absolute -top-2 -right-4">
+                                             {cartItems.length}
+                                        </span>
+                                   )}
+                              </p>
+                         </Link>
+                         <span>English 🌐</span>
+                         <span>
+                              Welcome Back! <strong>Abdel Rahman</strong>
+                         </span>
+                    </div>
+
+                    <div className="flex lg:hidden items-center gap-4">
+                         <button onClick={() => setShowSearch((prev) => !prev)} className="text-xl">
+                              <IconSearch />
+                         </button>
+                         <button onClick={() => setShowMenu((prev) => !prev)} className="text-xl">
+                              <IconMenuDeep />
+                         </button>
+                    </div>
+               </div>
+
+               {showMenu && (
+                    <div className="absolute top-full right-4 mt-2 bg-white text-black border rounded shadow-md w-60 p-4 z-10 lg:hidden">
+                         <Link href="/cart">
+                              <p className="relative mb-2">
+                                   Cart 🛒{" "}
+                                   {cartItems.length > 0 && (
+                                        <span className="bg-green-700 text-white px-2 text-sm rounded-3xl absolute -top-2 -right-4">
+                                             {cartItems.length}
+                                        </span>
+                                   )}
+                              </p>
+                         </Link>
+                         <p className="mb-2">English 🌐</p>
+                         <p>
+                              Welcome Back! <strong>Abdel Rahman</strong>
                          </p>
-                    </Link>
-                    <span>English 🌐</span>
-                    <span>
-                         Welcome Back! <strong>Abdel Rahman</strong>
-                    </span>
-               </div>
+                    </div>
+               )}
           </header>
-     );
+     ); 
 };
 
 export default Header;
