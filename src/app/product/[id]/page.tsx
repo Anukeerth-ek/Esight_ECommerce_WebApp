@@ -1,7 +1,6 @@
 import ProductDetail from "@/app/components/ProductDetail";
 import { fetchProductDetails } from "@/app/components/fetchProductDetail";
-import { Metadata } from "next";
-
+import type { Metadata } from "next";
 
 type PageProps = {
   params: {
