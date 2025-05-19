@@ -15,7 +15,7 @@ const Header = () => {
           <header className="relative px-20 py-4 border-b flex items-center justify-between">
                <div className="flex items-center gap-4">
                     <Link href="/">
-                         <h1 className="text-2xl font-bold text-blue-500">Stella</h1>
+                         <h1 className="text-2xl font-bold text-blue-500">ZyroMart</h1>
                     </Link>
 
                     <input
