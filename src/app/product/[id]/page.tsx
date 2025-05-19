@@ -2,11 +2,6 @@ import ProductDetail from "@/app/components/ProductDetail";
 import { fetchProductDetails } from "@/app/components/fetchProductDetail";
 import React from "react";
 
-type ProductDetailPageProps = {
-  params: {
-    id: string;
-  };
-};
 
 export default async function ProductDetailPage({ params }: { params: { id: string } }) {
   const id = Number(params.id);
