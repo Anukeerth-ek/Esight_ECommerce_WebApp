@@ -2,14 +2,16 @@
 
 import React, { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
+import { Product } from "../types";
+import { GetStaticProps } from "next";
 
 const ProductList = () => {
-     const [clothData, setClothData] = useState([]);
+     const [productData, setProductData] = useState([]);
 
      const handleFetchApi = () => {
           fetch("https://fakestoreapi.com/products")
                .then((res) => res.json())
-               .then((data) => setClothData(data));
+               .then((data) => setProductData(data));
      };
 
      useEffect(() => {
@@ -18,11 +20,9 @@ const ProductList = () => {
 
      return (
           <>
-              {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4"> */}
-                    {clothData?.map((item, index) => (
-                         <ProductCard key={index} product={item} />
+               {productData?.map((item, index) => (
+                    <ProductCard key={index} product={item} />
                ))}
-               {/* </div> */}
           </>
      );
 };

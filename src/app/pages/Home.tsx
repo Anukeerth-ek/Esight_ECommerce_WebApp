@@ -13,7 +13,7 @@ export default function HomePage() {
           <div>
                <HeroBanner />
                <div className="max-w-7xl mx-auto px-6 py-8">
-                    <h2 className="text-xl font-semibold mb-6">64 result for clothes</h2>
+                    <h2 className="text-xl font-semibold mb-6">results for clothes</h2>
                     <div className="block lg:flex gap-6">
                          <div className="hidden lg:block relative">
                               <FilterSidebar />
