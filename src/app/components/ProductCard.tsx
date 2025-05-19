@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Product } from "../types/index";
 import { IconStarFilled, IconStarHalfFilled, IconStar } from "@tabler/icons-react";
-import Image from "next/image";
 
 type ProductProps = {
      product: Product;

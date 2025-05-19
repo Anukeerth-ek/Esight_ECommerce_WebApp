@@ -5,7 +5,6 @@ import { decrementQuantity, incrementQuantity, removeFromCart } from "../store/c
 import { RootState } from "../store/store";
 import { IconTrash } from "@tabler/icons-react";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function CartPage() {
      const dispatch = useDispatch();
@@ -36,7 +35,7 @@ export default function CartPage() {
                               <div className="text-center text-gray-600 mt-10">
                                    <h2 className="text-2xl font-semibold mb-2">Your cart is empty 🛒</h2>
                                    <div className="flex items-center justify-center">
-                                        <Image
+                                        <img
                                              className="h-1/2"
                                              alt="Empty Cart"
                                              width={100}

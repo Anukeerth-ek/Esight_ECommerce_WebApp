@@ -4,7 +4,7 @@ import { Product } from "../types";
 import { addToCart } from "../store/cartSlice";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
+
 
 export default function ProductDetail({ product }: { product: Product }) {
      const dispatch = useDispatch();

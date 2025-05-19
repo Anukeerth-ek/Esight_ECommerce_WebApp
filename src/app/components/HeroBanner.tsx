@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 
 const HeroBanner = () => (
      <section className="relative w-full h-[350px] bg-gray-100">
