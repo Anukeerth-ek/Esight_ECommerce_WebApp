@@ -11,3 +11,19 @@ export type Product = {
     count: number;
   }
 };
+
+// types/react-shimmer-effects.d.ts
+import * as React from 'react';
+
+declare module 'react-shimmer-effects' {
+  export interface ShimmerSimpleGalleryProps {
+    card?: boolean;
+    imageHeight?: number;
+    caption?: boolean;
+    imageType?: 'circular' | 'rectangular';
+    items?: Array<{ url: string; title?: string }>;
+    col?: number;
+    row?: number;
+  }
+
+}
