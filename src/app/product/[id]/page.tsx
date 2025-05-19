@@ -8,9 +8,7 @@ type ProductDetailPageProps = {
   };
 };
 
-export default async function ProductDetailPage({ 
-  params 
-}: ProductDetailPageProps) {
+export default async function ProductDetailPage({ params }: { params: { id: string } }) {
   const id = Number(params.id);
   const data = await fetchProductDetails(id);
   
